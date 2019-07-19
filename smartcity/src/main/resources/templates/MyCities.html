@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<meta charset="UTF-8" />
+
+<!-- Head -->
+<div th:replace="fragments/Head :: head" />
+
+
+<body>
+
+	<!-- Header -->
+	<div th:replace="fragments/Header :: header" />
+
+
+
+
+	<!-- Inner Header-->
+	<section class="inner-banner2 clearfix">
+		<div class="container clearfix">
+			<h2>Mes villes</h2>
+		</div>
+	</section>
+	<section class="breadcumb-wrapper">
+		<div class="container clearfix">
+			<ul class="breadcumb">
+				<li><a th:href="@{/accueil}">Accueil</a></li>
+				<li><span>Mon espace</span></li>
+				<li><span>Mes villes</span></li>
+			</ul>
+		</div>
+	</section>
+
+
+
+
+
+	<!-- Our Services-->
+	<section class="our-services sectpad-ser">
+		<div class="container clearfix">
+			<div class="section_header color">
+				<h2>Mes villes</h2>
+			</div>
+
+
+			<div class="row">
+				<div th:if="${#lists.isEmpty(cities)}"><h3>Aucune ville disponible!</h3></div>
+				<div th:each="city : ${cities}" class="col-sm-4 service-info">
+					<div class="item">
+						<div class="post-image">
+							<img src="../images/services/ser-img1.jpg" alt="" /><a
+								th:href="@{|/city/showcity/${city.cityId}|}"
+								class="four_arrow_hover_box"><span class="arrows"><span></span></span></a>
+						</div>
+						<a th:href="@{|/city/showcity/${city.cityId}|}">
+							<h4 th:text="${city.cityName}"></h4>
+						</a>
+						<p th:text="${city.cityDescription}"></p>
+						<h6>
+							<a th:href="@{|/city/detailscity/${city.cityId}|}">Afficher
+								la ville</a> <a th:href="@{|/city/showcity/${city.cityId}|}">Editer
+								la ville</a>
+						</h6>
+					</div>
+				</div>
+			</div>
+		</div>
+
+
+	</section>
+
+
+
+
+
+
+
+	<!--footer-->
+	<div th:replace="fragments/Footer :: footer" />
+
+
+
+	<!--lien javascript-->
+
+	<script src="js/jquery-1.12.2.min.js"></script>
+	<script src="js/bootstrap.min.js"></script>
+	<!-- Revolution Slider Tools-->
+	<script src="vendors/revolution/js/jquery.themepunch.revolution.min.js"></script>
+	<!-- Revolution Slider-->
+	<script type="text/javascript"
+		src="vendors/revolution/js/extensions/revolution.extension.slideanims.min.js"></script>
+	<script type="text/javascript"
+		src="vendors/revolution/js/extensions/revolution.extension.layeranimation.min.js"></script>
+	<script type="text/javascript"
+		src="vendors/revolution/js/extensions/revolution.extension.navigation.min.js"></script>
+	<script src="js/jquery.form.js"></script>
+	<script src="js/jquery.validate.min.js"></script>
+	<script src="js/contact.js"></script>
+	<!-- owl carousel-->
+	<script src="vendors/owlcarousel/owl.carousel.min.js"></script>
+	<script src="vendors/jquery-ui-1.11.4/jquery-ui.min.js"></script>
+	<script
+		src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDTI1BZJKFCeJ8g9O01CMZ4QvVCfdPYkrE"></script>
+	<script src="js/gmaps.min.js"></script>
+	<script src="js/theme.js"></script>
+</body>
+</html>

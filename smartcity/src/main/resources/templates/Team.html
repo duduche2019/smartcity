@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<meta charset="UTF-8" />
+
+<!-- Head -->
+<div th:replace="fragments/Head :: head" />
+
+
+<body>
+
+	<!-- Header -->
+	<div th:replace="fragments/Header :: header" />
+
+
+
+
+	<!-- Inner Header-->
+	<section class="inner-banner2 clearfix">
+		<div class="container clearfix">
+			<h2>Notre équipe</h2>
+		</div>
+	</section>
+	<section class="breadcumb-wrapper">
+		<div class="container clearfix">
+			<ul class="breadcumb">
+				<li><a th:href="@{/accueil}">Accueil</a></li>
+				<li><a th:href="@{/about}">A propos</a></li>
+				<li><span>Notre équipe</span></li>
+			</ul>
+		</div>
+	</section>
+	<!-- Single Service Page-->
+	<section class="core-projects sectpad">
+		<div class="container clearfix">
+			<h1>Les acteurs du projet Smartcity</h1>
+			<p>Equipe pluridisciplinaire et compétences complémentaires,
+				pourrait bien résumer l’essence du groupe. Bien sûr afin de
+				progresser et de valoriser les compétences de chacun notre chef de
+				projet aura su donner la cohésion et le sens nécessaire à
+				l’aboutissement de notre tâche.</p>
+		</div>
+	</section>
+	<!-- Team-->
+	<section class="team-pad team-area">
+		<div class="container clearfix">
+			<div class="our-team-page">
+				<div class="row">
+					<div class="col-sm-6 col-md-3 team">
+						<div class="team-images row m0">
+							<img src="images/team/1.png" alt="" />
+						</div>
+						<ul class="nav social-icons">
+							<li><a href="#"><i class="fa fa-twitter"></i></a></li>
+							<li><a href="#"><i class="fa fa-linkedin-square"></i></a></li>
+							<li><a href="#"><i class="fa fa-facebook-square"></i></a></li>
+							<li><a href="#"><i class="fa fa-skype"></i></a></li>
+						</ul>
+						<div class="team-content">
+							<a href="#">
+								<h4>Marie Antoine BAHIA</h4>
+							</a>
+							<p>Chef de projet</p>
+							<p>Architecture et Back end</p>
+						</div>
+					</div>
+					<div class="col-sm-6 col-md-3 team">
+						<div class="team-images row m0">
+							<img src="images/team/2.png" alt="" />
+						</div>
+						<ul class="nav social-icons">
+							<li><a href="#"><i class="fa fa-twitter"></i></a></li>
+							<li><a href="#"><i class="fa fa-linkedin-square"></i></a></li>
+							<li><a href="#"><i class="fa fa-facebook-square"></i></a></li>
+							<li><a href="#"><i class="fa fa-skype"></i></a></li>
+						</ul>
+						<div class="team-content">
+							<a href="#">
+								<h4>Michaël MAIGNAN</h4>
+							</a>
+							<p>Concepteur de base de données</p>
+							<p>Algo et Back end</p>
+						</div>
+					</div>
+					<div class="col-sm-6 col-md-3 team">
+						<div class="team-images row m0">
+							<img src="images/team/3.png" alt="" />
+						</div>
+						<ul class="nav social-icons">
+							<li><a href="#"><i class="fa fa-twitter"></i></a></li>
+							<li><a href="#"><i class="fa fa-linkedin-square"></i></a></li>
+							<li><a href="#"><i class="fa fa-facebook-square"></i></a></li>
+							<li><a href="#"><i class="fa fa-skype"></i></a></li>
+						</ul>
+						<div class="team-content">
+							<a href="#">
+								<h4>Nicolas SCHROETTER</h4>
+							</a>
+							<p>Rédacteur technique</p>
+							<p>Algo et Back end</p>
+						</div>
+					</div>
+					<div class="col-sm-6 col-md-3 team">
+						<div class="team-images row m0">
+							<img src="images/team/4.png" alt="" />
+						</div>
+						<ul class="nav social-icons">
+							<li><a href="#"><i class="fa fa-twitter"></i></a></li>
+							<li><a href="#"><i class="fa fa-linkedin-square"></i></a></li>
+							<li><a href="#"><i class="fa fa-facebook-square"></i></a></li>
+							<li><a href="#"><i class="fa fa-skype"></i></a></li>
+						</ul>
+						<div class="team-content">
+							<a href="#">
+								<h4>Karim SABEUR</h4>
+							</a>
+							<p>Concepteur WEB</p>
+							<p>Front end</p>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</section>
+
+	<!-- footer -->
+	<div th:replace="fragments/Footer :: footer" />
+
+	<script src="js/jquery-1.12.2.min.js"></script>
+	<script src="js/bootstrap.min.js"></script>
+	<!-- Revolution Slider Tools-->
+	<script src="vendors/revolution/js/jquery.themepunch.revolution.min.js"></script>
+	<!-- Revolution Slider-->
+	<script type="text/javascript"
+		src="vendors/revolution/js/extensions/revolution.extension.slideanims.min.js"></script>
+	<script type="text/javascript"
+		src="vendors/revolution/js/extensions/revolution.extension.layeranimation.min.js"></script>
+	<script type="text/javascript"
+		src="vendors/revolution/js/extensions/revolution.extension.navigation.min.js"></script>
+	<script src="js/jquery.form.js"></script>
+	<script src="js/jquery.validate.min.js"></script>
+	<script src="js/contact.js"></script>
+	<!-- owl carousel-->
+	<script src="vendors/owlcarousel/owl.carousel.min.js"></script>
+	<script src="vendors/jquery-ui-1.11.4/jquery-ui.min.js"></script>
+	<script
+		src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDTI1BZJKFCeJ8g9O01CMZ4QvVCfdPYkrE"></script>
+	<script src="js/gmaps.min.js"></script>
+	<script src="js/theme.js"></script>
+
+
+
+
+
+</body>
+</html>

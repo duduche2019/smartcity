@@ -1,0 +1,33 @@
+{
+    "plotId": 3,
+    "plotName": "my parcelle",
+    "positionX": 24,
+    "positionY": 67,
+    "city": {
+        "cityId": 2,
+        "cityName": null,
+        "cityAbrev": null,
+        "width": 0,
+        "height": 0,
+        "minimumValue": 0,
+        "maximumValue": 0,
+        "cityDescription": null,
+        "euclidDist": 0,
+        "distPerBox": 0,
+        "user": null
+    },
+    "plotType": {
+        "plotTypeId": 2,
+        "plotTypeName": null,
+        "plotTypeAbrev": null,
+        "category": null,
+        "influenceLevel": null,
+        "negativeInfluence": 0,
+        "positiveInfluence": 0,
+        "negDistInfluence": 0,
+        "posDistInfluence": 0,
+        "color": null,
+        "plotTypeDescription": null,
+        "possibleValue": false
+    }
+}

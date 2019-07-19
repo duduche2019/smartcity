@@ -1,0 +1,471 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<meta charset="UTF-8" />
+
+<!-- Head -->
+<div th:replace="fragments/Head :: head" />
+
+
+<body>
+	<!-- Header -->
+	<div th:replace="fragments/Header :: header" />
+
+
+	<!-- Inner Header-->
+	<section class="inner-banner2 clearfix">
+		<div class="container clearfix">
+			<h2>Créer un type de parcelle</h2>
+		</div>
+	</section>
+	<section class="breadcumb-wrapper">
+		<div class="container clearfix">
+			<ul class="breadcumb">
+				<li><a th:href="@{/accueil}">Accueil</a></li>
+				<li><span>Créer un type de parcelle</span></li>
+			</ul>
+		</div>
+	</section>
+
+
+	<!-- Contact us Page-->
+	<section class="core-projects touch">
+		<div class="sectpad touch_bg">
+
+			<div class="container clearfix">
+				<h1>Créer votre type de parcelle</h1>
+				<div class="row touch_middle">
+
+
+					<div class="col-md-4 open_hours">
+						<div class="touch_top-con">
+							<ul class="nav">
+								<li class="item">
+									<div class="media">
+										<div class="media-left">
+											<a href="#"><i class="fa fa-map-marker"></i></a>
+										</div>
+										<div class="media-body">SMARTCITY, 247 Avenue de colmar
+											67000 Strasbourg</div>
+									</div>
+								</li>
+								<li class="item">
+									<div class="media">
+										<div class="media-left">
+											<a href="#"><i class="fa fa-envelope-o"></i></a>
+										</div>
+										<div class="media-body">
+											<a href="mailto:contact@smartcity.com">contact@smartcity.com</a><br />
+											<a href="mailto:support@smartcity.com">support@smartcity.com</a>
+										</div>
+									</div>
+								</li>
+								<li class="item">
+									<div class="media">
+										<div class="media-left">
+											<a href="#"><i class="fa fa-phone"></i></a>
+										</div>
+										<div class="media-body">
+											03 88 99 99 99<br /> 03 88 56 56 56
+										</div>
+										<br />
+										<div>
+											<h4>Important :</h4>
+											<p>influence maximale négative : influence maximale
+												négative d'une parcelle sur une autre ( entre 0 et 100)</p>
+											<p>influence maximale positive : influence maximale
+												positive d'une parcelle sur une autre ( entre 0 et 100)</p>
+											<p>Distance maximale négative : distance maximale au dela
+												de laquelle une parcelle n'influence plus de manière
+												négative sur le prix d'une autre parcelle</p>
+											<p>distance maximale positive : distance maximale au dela
+												de laquelle une parcelle n'influence plus de manière
+												positive sur le prix d'une autre parcelle</p>
+										</div>
+
+									</div>
+								</li>
+							</ul>
+						</div>
+					</div>
+
+
+
+					<div class="col-md-8 input_form">
+						<form id="contactForm" action=""
+							th:action="@{/plottype/addPlotype}" th:object="${plotType}"
+							method="post">
+
+
+							<div class="form-group">
+								<input id="plotTypeName" type="text" name="plotTypeName"
+									placeholder="Nom du type de la nouvelle parcelle"
+									class="form-control" />
+								<!-- 
+									<span class="text-danger"
+									th:if="${#fields.hasErrors('plotTypeName')}"
+									th:errors="*{plotTypeName}"> </span>
+									 -->
+								<div class="form-group">
+									<input id="plotTypeAbrev" type="text" name="plotTypeAbrev"
+										placeholder="Abréviation" class="form-control" />
+									<!--  <span class="text-danger"
+									th:if="${#fields.hasErrors('plotTypeAbrev')}"
+									th:errors="*{plotTypeAbrev}"> </span>-->
+								</div>
+
+
+								<div class="form-group">
+									<label name="category"><p>catégorie de la parcelle
+											:</p></label> <select name="category" class="form-control">
+										<option
+											th:each="categoryOpt : ${T(com.smartcity.smartcity.model.enums.Category).values()}"
+											th:value="${categoryOpt}" th:text="${categoryOpt}"
+											class="form-control"></option>
+									</select>
+
+									<!--  <span class="text-danger"
+									th:if="${#fields.hasErrors('plotTypeAbrev')}"
+									th:errors="*{plotTypeAbrev}"> </span>-->
+								</div>
+
+
+
+								<div class="form-group">
+									<input id="negativeInfluence" type="number"
+										name="negativeInfluence"
+										placeholder="influence maximale négative d'une parcelle (entre 0 et 100)"
+										class="form-control" min="0" max="100" />
+									<!--  <span class="text-danger"
+									th:if="${#fields.hasErrors('negativeInfluence')}"
+									th:errors="*{negativeInfluence}"> </span>-->
+								</div>
+
+								<div class="form-group">
+									<input id="positiveInfluence" type="number"
+										name="positiveInfluence"
+										placeholder="influence maximale positive d'une parcelle ( entre 0 et 100)"
+										class="form-control" min="0" max="100" />
+									<!--  <span class="text-danger"
+									th:if="${#fields.hasErrors('positiveInfluence')}"
+									th:errors="*{positiveInfluence}"> </span>-->
+								</div>
+
+								<div class="form-group">
+									<input id="negDistInfluence" type="number"
+										name="negDistInfluence"
+										placeholder="distance maximale négative " class="form-control"
+										min="0" />
+									<!--  <span class="text-danger"
+									th:if="${#fields.hasErrors('negDistInfluence')}"
+									th:errors="*{negDistInfluence}"> </span>-->
+								</div>
+
+								<div class="form-group">
+									<input id="posDistInfluence" type="number"
+										name="posDistInfluence"
+										placeholder="distance maximale positive" class="form-control"
+										min="0" />
+									<!--  <span class="text-danger"
+									th:if="${#fields.hasErrors('negDistInfluence')}"
+									th:errors="*{negDistInfluence}"> </span>-->
+								</div>
+
+								<div class="form-group">
+									<label nom="color"><p>Choisir une couleur :</p></label> <input
+										type="color" name="color"
+										placeholder="couleur de la parcelle " />
+
+									<!--  <span class="text-danger"
+									th:if="${#fields.hasErrors('color')}"
+									th:errors="*{color}"> </span>-->
+								</div>
+								<div class="form-group">
+									<textarea id="plotTypeDescription" rows="5"
+										name="plotTypeDescription"
+										placeholder="Description du type de la parcelle ( maximum 355 caractère)"
+										class="form-control" maxlength="355" />
+									<!--  <span class="text-danger"
+									th:if="${#fields.hasErrors('plotTypeDescription')}"
+									th:errors="plotTypeDescription"> </span>-->
+								</div>
+
+								<div class="form-group">
+									<input list="possibleValue" name="possibleValue"
+										class="form-control" placeholder="valeur possible" />
+									<datalist id="possibleValue">
+										<option value="true" />
+										<option value="false" />
+									</datalist>
+								</div>
+
+
+							</div>
+
+							<div class="row m0">
+								<button type="submit" class="btn btn-default submit">
+									Créer un type de parcelle <i class="fa fa-angle-double-right"></i>
+								</button>
+							</div>
+						</form>
+					</div>
+
+					<!-- 
+
+
+Category category
+	private boolean possibleValue;
+	
+	
+			
+	
+
+
+			
+							<div class="form-group">
+								<input name="cityAbrev" id="cityAbrev" type="text"
+									placeholder="Abréviation" class="form-control" />
+				
+							</div>
+
+							<div class="form-group">
+								<input id="width" type="number" name="width"
+									placeholder="Entrez une longueur pour la ville"
+									class="form-control"  min="4" max="12"/>
+								
+									
+							</div>
+
+							<div class="form-group">
+								<input id="height" type="number" name="height"
+									placeholder="Entrez une hauteur pour la ville"
+									class="form-control" min="4" max="12" /> 
+									
+								
+								
+							</div>
+
+							<div class="form-group">
+								<input id="minimumValue" type="number" name="minimumValue" 
+									placeholder="Valeur minimum de la ville (entre 0 et 50000)"
+									class="form-control" min="0.00" max="50000.00" step="any"/>
+								
+									
+							</div>
+							
+							
+							
+								<div class="form-group">
+								<input id="maximumValue" type="number" name="maximumValue" 
+									placeholder="Valeur maximum de la ville (entre 0 et 50000)"
+									class="form-control" min="0.00" max="50000.00" step="any"/> 
+									
+								
+									
+							</div>
+
+
+
+							<div class="form-group">
+								<textarea id="cityDescription" rows="5" name="cityDescription"
+									placeholder="Description de la ville ( maximum 355 caractère)"
+									class="form-control" maxlength="355" />
+								<span class="text-danger"
+									th:if="${#fields.hasErrors('cityDescription')}"
+									th:errors="*{cityDescription}"> </span>
+							</div>
+
+							<div class="row m0">
+								<button type="submit" class="btn btn-default submit">
+									Construire une ville <i class="fa fa-angle-double-right"></i>
+								</button>
+							</div>
+
+
+						</form>
+					</div>	
+			
+			
+					
+					-->
+
+
+				</div>
+			</div>
+
+
+		</div>
+	</section>
+
+
+
+
+
+
+
+
+
+
+
+
+
+	<!-- contenu -->
+	<!-- Contact us Page-->
+
+	<!--
+    <section class="core-projects touch">
+      <div class="sectpad touch_bg">
+        <div class="container clearfix">
+          <h1>Construisez votre ville intelligente</h1>
+          <p>écrire du texte</p>
+          <h6>...écrire... <span> texte</span></h6>
+          <div class="row touch_middle">
+            <div class="col-md-4 open_hours">
+              <div class="touch_top-con">
+                <ul class="nav">
+                  <li class="item">
+                    <div class="media">
+                      <div class="media-left"><a href="#"><i class="fa fa-map-marker"></i></a></div>
+                      <div class="media-body">SMARTCITY, 247 Avenue de colmar 67000 Strasbourg</div>
+                    </div>
+                  </li>
+                  <li class="item">
+                    <div class="media">
+                      <div class="media-left"><a href="#"><i class="fa fa-envelope-o"></i></a></div>
+                      <div class="media-body"><a href="mailto:contact@smartcity.com">contact@smartcity.com</a><br/><a href="mailto:support@smartcity.com">support@smartcity.com</a></div>
+                    </div>
+                  </li>
+                  <li class="item">
+                    <div class="media">
+                      <div class="media-left"><a href="#"><i class="fa fa-phone"></i></a></div>
+                      <div class="media-body">03 88 99 99 99<br>                                        03 88 56 56 56</div>
+                    </div>
+                  </li>
+                </ul>
+              </div>
+            </div>
+
+            <div class="col-md-8 input_form">
+
+              <form  id="createcity" action="#" th:action="@{/addCity}" th:object="${city}" method="post">
+
+               <input id="cityName" type="text" name="cityName" placeholder="Nom de la ville" class="form-control" th:field="*{cityName}" required /><br/>
+
+
+               <input  name="cityAbrev" id="cityAbrev" type="text" placeholder="Abréviation" class="form-control" th:field="*{cityAbrev}" required /><br/>
+
+
+               <input  type="number" name="width" id="width" th:field="*{width}" placeholder="Longueur de la ville" class="form-control" required min="4" max="12" /><br/>
+
+
+               <input type="number" name="height" id="height" th:field="*{height}" placeholder="Hauteur de la ville" class="form-control" required min="4" max="12" /><br/>
+
+
+               <input type="number" name="minimumValue" id="minimumValue" th:field="*{minimumValue}" required  placeholder="Valeur Minimum entre 0 et 50000" class="form-control"  min="0" max="50000"/><br/>
+
+
+
+               <input type="number" name="maximumValue" id="maximumValue" th:field="*{maximumValue}" placeholder="Valeur maximmum entre 0 et 50000" class="form-control" required min="0" max="50000"/><br/>
+
+
+
+               <input type="text" name="cityDescription" id="cityDescription"  th:field="*{cityDescription}" placeholder="Description de la ville, maximum 355 caractère" class="form-control" required maxlength="355" /><br />
+
+
+               <input type="number" name="userId" id="userId" th:field="*{user.userId}" placeholder="identifiant de l'utilisateur" class="form-control" min="0" required="" /><br />
+
+               <div class="row m0">
+                <button type="submit" class="btn btn-default submit">Creer <i class="fa fa-angle-double-right"></i></button>
+              </div>
+            </form>
+            <div id="success">
+              <p>Votre message a été envoyé avec succès.</p>
+            </div>
+            <div id="error">
+              <p>Entrez votre nom !</p>
+            </div>
+          </div>
+
+
+          </div>
+        </div>
+      </div>
+</section>
+    
+ 
+	
+
+	<div class="container">
+
+		<div class="row">
+			<div class="col-sm-12">
+
+
+				<form action="#" th:action="@{/addCity}" th:object="${city}"
+					method="post">
+
+
+					<label for="cityName"> Name : </label> <input type="text"
+						th:field="*{cityName}" /><br /> <label for="cityAbrev">Abreviation
+						: </label> <input type="text" name="cityAbrev" id="cityAbrev"
+						th:field="*{cityAbrev}" required="" /><br /> <label for="width">Width
+						: </label> <input type="number" name="width" id="width"
+						th:field="*{width}" required="" min="4" max="12" /><br /> <label
+						for="height">Height : </label> <input type="number" name="height"
+						id="height" th:field="*{height}" required="" min="4" max="12" /><br />
+
+					<label for="minimumValue">Minimum value : </label> <input
+						type="number" name="minimumValue" id="minimumValue"
+						th:field="*{minimumValue}" required="" min="0" max="50000" /><br />
+
+
+					<label for="maximumValue">Maximum value : </label> <input
+						type="number" name="maximumValue" id="maximumValue"
+						th:field="*{maximumValue}" required="" min="0" max="50000" /><br />
+
+					<label for="cityDescription">City description : </label> <input
+						type="text" name="cityDescription" id="cityDescription"
+						placeholder="enter" th:field="*{cityDescription}" required=""
+						maxlength="355" /><br /> <label for="userId"> User
+						identifiant : </label> <input type="number" name="userId" id="userId"
+						th:field="*{user.userId}" required="" /><br />
+
+
+					<button type="submit">Envoyer</button>
+				</form>
+
+			</div>
+		</div>
+	</div>
+
+
+ -->
+
+
+	<!-- footer -->
+	<div th:replace="fragments/Footer :: footer" />
+
+
+	<script src="js/jquery-1.12.2.min.js"></script>
+	<script src="js/bootstrap.min.js"></script>
+	<!-- Revolution Slider Tools-->
+	<script src="vendors/revolution/js/jquery.themepunch.revolution.min.js"></script>
+	<!-- Revolution Slider-->
+	<script type="text/javascript"
+		src="vendors/revolution/js/extensions/revolution.extension.slideanims.min.js"></script>
+	<script type="text/javascript"
+		src="vendors/revolution/js/extensions/revolution.extension.layeranimation.min.js"></script>
+	<script type="text/javascript"
+		src="vendors/revolution/js/extensions/revolution.extension.navigation.min.js"></script>
+	<script src="js/jquery.form.js"></script>
+	<script src="js/jquery.validate.min.js"></script>
+	<script src="js/contact.js"></script>
+	<!-- owl carousel-->
+	<script src="vendors/owlcarousel/owl.carousel.min.js"></script>
+	<script src="vendors/jquery-ui-1.11.4/jquery-ui.min.js"></script>
+	<script
+		src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDTI1BZJKFCeJ8g9O01CMZ4QvVCfdPYkrE"></script>
+	<script src="js/gmaps.min.js"></script>
+	<script src="js/theme.js"></script>
+
+</body>
+</html>

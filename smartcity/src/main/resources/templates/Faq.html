@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<meta charset="UTF-8" />
+
+<!-- Head -->
+<div th:replace="fragments/Head :: head" />
+
+
+<body>
+
+<!-- Header -->
+	<div th:replace="fragments/Header :: header" />
+	
+	
+	
+<!-- Inner Header-->
+    <section class="inner-banner2 clearfix">
+      <div class="container clearfix">
+        <h2>Foire aux questions</h2>
+      </div>
+    </section>
+    <section class="breadcumb-wrapper">
+      <div class="container clearfix">
+        <ul class="breadcumb">
+          <li><a href="index.html">Accueil</a></li>
+            <li><a th:href="@{/about}">A propos</a></li>
+          <li><span>Foire aux questions </span></li>
+        </ul>
+      </div>
+    </section>
+    <!-- News Page-->
+    <section class="core-projects sectpad faq-page">
+      <div class="container clearfix">
+        <div class="row">
+          <div class="col-md-4 col-sm-12 pull-left">
+            <div>
+              <!-- Search-->
+              <div class="widget-search-blog">
+                <div class="row widget-inner">
+                  <form action="#" method="get" class="search-form">
+                    <div class="input-group">
+                      <input type="search" placeholder="Entrez un mot clé" class="form-control"/><span class="input-group-addon">
+                        <button type="submit"><i class="icon icon-Search"></i></button></span>
+                    </div>
+                  </form>
+                </div>
+              </div>
+              <div class="single-sidebar-widget">
+                <div class="sec-title">
+                  <h2><span>Categories</span></h2>
+                </div>
+                <div class="categories">
+                  <ul>
+                    <li><a href="#">Smartcity</a></li>
+                    <li><a href="#">Services</a></li>
+                    <li><a href="#">contact</a></li>
+                    <li><a href="#">inscription-connexion </a></li>
+                  </ul>
+                </div>
+              </div>
+              
+              <div class="single-sidebar-widget">
+                <div class="sec-title">
+                  <h2><span>Text widget</span></h2>
+                </div>
+                <div class="text-box">
+                  <p>Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium dolore que laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi arch itecto beatae vitae dict eaque ipsa quae.</p>
+                </div>
+              </div>
+              <div class="single-sidebar-widget">
+                <div class="sec-title">
+                  <h2><span>Tag</span></h2>
+                </div>
+                <div class="tag-cloud">
+                  <ul>
+                    <li><a href="#">smartcity</a></li>
+                    <li><a href="#">parcelle</a></li>
+                    <li><a href="#">valeur immobilère</a></li>
+                    <li><a href="#">ville</a></li>
+
+                  </ul>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-8 col-sm-12 pull-right">
+            <!-- News-->
+            <div class="single-post-wrapper">
+              <div class="sec-title">
+                <h2><span>Foire Aux Questions</span></h2>
+                <p>Vous recherchez une information ? Les questions les plus fréquemment posées sont recensées dans notre FAQ.
+                 Consultez le thème qui vous intéresse.</p>
+              </div>
+              <form action="#" class="faq-form">
+                <input type="text" placeholder="Entrez un mot clé"/>
+                <button type="submit" class="thm-btn">SEARCH</button>
+              </form>
+
+              <br/><br/>
+              <div class="sec-title">
+                <h2><span>Questions courantes</span></h2>
+              </div><br/><br/>
+              <div data-grp-name="popular-question-accrodion" class="accrodion-grp">
+                <div class="accrodion">
+                  <div class="accrodion-title">
+                    <h4>Dans combien de pays cette application est-elle disponible ?</h4>
+                  </div>
+                  <div class="accrodion-content">
+                    <h3>Dans combien de pays cette application est-elle disponible ?</h3>
+                    <p>A priori dans tous les pays qui en feront la demande, sauf en cas de désaccord commerciaux entre ces dits pays.</p>
+                    <div class="img-caption">
+                      <div class="img-box"><img src="images/accrodion-2.jpg" alt="Awesome Image" class="img-responsive"/></div>
+                      <div class="content-box">
+                        <p>Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt. Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet, consect etur, adipisci velit, sed quia non numquam. Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet, consect. eos qui ratione voluptatem sequi nesciunt. Neque porro quisquam est, qui dolorem ipsum</p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                
+                
+                <div class="accrodion">
+                  <div class="accrodion-title">
+                    <h4>Un utilisateur lambda peut-il modifier une ville existante ?</h4>
+                  </div>
+                  <div class="accrodion-content">
+                    <h3>Un utilisateur lambda peut-il modifier une ville existante ?</h3>
+                    <p>Non, seul le créateur de la ville peut effectuer des modifications.</p>
+                    <div class="img-caption">
+                      <div class="img-box"><img src="images/accrodion-2.jpg" alt="Awesome Image" class="img-responsive"/></div>
+                      <div class="content-box">
+                        <p>Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt. Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet, consect etur, adipisci velit, sed quia non numquam. Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet, consect. eos qui ratione voluptatem sequi nesciunt. Neque porro quisquam est, qui dolorem ipsum</p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                
+                
+                <div class="accrodion">
+                  <div class="accrodion-title">
+                    <h4>Des types de parcelles différentes peuvent-ils être intégrés à l’application ?</h4>
+                  </div>
+                  <div class="accrodion-content">
+                    <h3>Des types de parcelles différentes peuvent-ils être intégrés à l’application ?</h3>
+                    <p>Oui, cette fonctionnalité sera à priori disponible dans l’application.</p>
+                    <div class="img-caption">
+                      <div class="img-box"><img src="images/accrodion-2.jpg" alt="Awesome Image" class="img-responsive"/></div>
+                      <div class="content-box">
+                        <p>Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt. Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet, consect etur, adipisci velit, sed quia non numquam. Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet, consect. eos qui ratione voluptatem sequi nesciunt. Neque porro quisquam est, qui dolorem ipsum</p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                
+             
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+	
+	
+
+<!--footer-->
+	<div th:replace="fragments/Footer :: footer" />
+	
+
+<!--lien javascript-->
+<script src="js/jquery-1.12.2.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <!-- Revolution Slider Tools-->
+    <script src="vendors/revolution/js/jquery.themepunch.revolution.min.js"></script>
+    <!-- Revolution Slider-->
+    <script type="text/javascript" src="vendors/revolution/js/extensions/revolution.extension.slideanims.min.js"></script>
+    <script type="text/javascript" src="vendors/revolution/js/extensions/revolution.extension.layeranimation.min.js"></script>
+    <script type="text/javascript" src="vendors/revolution/js/extensions/revolution.extension.navigation.min.js"></script>
+    <script src="js/jquery.form.js"></script>
+    <script src="js/jquery.validate.min.js"></script>
+    <script src="js/contact.js"></script>
+    <!-- owl carousel-->
+    <script src="vendors/owlcarousel/owl.carousel.min.js"></script>
+    <script src="vendors/jquery-ui-1.11.4/jquery-ui.min.js"></script>
+    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDTI1BZJKFCeJ8g9O01CMZ4QvVCfdPYkrE"></script>
+    <script src="js/gmaps.min.js"></script>
+    <script src="js/theme.js"></script>
+
+</body>
+</html>

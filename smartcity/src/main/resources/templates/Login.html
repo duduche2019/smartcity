@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<meta charset="UTF-8" />
+
+<!-- Head -->  
+<div th:replace="fragments/Head :: head"/> 
+
+<body>
+<!-- Header -->
+<div th:replace="fragments/Header :: header"/> 
+
+
+
+    <!-- Inner Header-->
+    <section class="inner-banner2 clearfix">
+      <div class="container clearfix">
+        <h2>Espace connexion</h2>
+      </div>
+    </section>
+    <section class="breadcumb-wrapper">
+      <div class="container clearfix">
+        <ul class="breadcumb">
+          <li><a th:href="@{/accueil}">Accueil</a></li>
+          <li><span>Connexion</span></li>
+        </ul>
+      </div>
+    </section>
+    <!-- Contact us Page-->
+    <section class="core-projects touch">
+      <div class="sectpad touch_bg">
+        <div class="container clearfix">
+          <h1>Sign in</h1>
+          <div class="row touch_middle ">
+            <div class="col-md-8 input_form">
+
+
+ <!-- Default form login -->
+<!--  d-flex justify-content-center -->
+
+
+
+  <!-- 
+  <form  class="text-center border border-light p-5" id="contactForm" action="" th:action="@{test}"
+              th:object="${user}" method="post">
+   -->
+  
+  
+              
+<form  id="contactForm" action="" th:action="@{/usersession}"
+th:object="${user}" method="post">
+
+ 
+<div class="form-group">
+                <input id="login" type="text" name="login" placeholder="login"
+                  class="form-control"/>
+                  <span class="text-danger"
+                   th:if="${#fields.hasErrors('login')}"
+                  th:errors="*{login}"></span> 
+</div>
+
+<div class="form-group">
+                <input id="password" type="text" name="password"
+                  placeholder="mot de passe" class="form-control"/>
+                  <span class="text-danger"
+                  th:if="${#fields.hasErrors('password')}"
+                  th:errors="*{password}"></span>
+</div>
+
+<!-- 
+<div class="form-group">
+                <input id="password" type="password" name="password"
+                  placeholder="mot de passe" class="form-control"/>
+                  <span class="text-danger"
+                  th:if="${#fields.hasErrors('password')}"
+                  th:errors="*{password}"></span>
+</div>
+-->
+
+    <div class="d-flex justify-content-around">
+        <div>
+            <!-- Remember me -->
+            <div class="custom-control custom-checkbox">
+                <input type="checkbox" class="custom-control-input" id="defaultLoginFormRemember"/>
+                <label class="custom-control-label" for="defaultLoginFormRemember">Remember me</label>
+            </div>
+        </div>
+        <div>
+            <!-- Forgot password -->
+            <a href="">Forgot password?</a>
+        </div>
+    </div>
+
+    <!-- Sign in button -->
+    <button class="btn btn-default submit" type="submit">Connectez-vous <i class="fa fa-angle-double-right"></i></button>
+
+    <!-- Register -->
+    <p>Not a member?
+        <a href="">Register</a>
+    </p>
+
+</form>
+<!-- Default form login -->
+
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+
+
+<!-- footer -->
+	<div th:replace="fragments/Footer :: footer"/>  
+	
+
+  <script src="js/jquery-1.12.2.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <!-- Revolution Slider Tools-->
+    <script src="vendors/revolution/js/jquery.themepunch.revolution.min.js"></script>
+    <!-- Revolution Slider-->
+    <script type="text/javascript" src="vendors/revolution/js/extensions/revolution.extension.slideanims.min.js"></script>
+    <script type="text/javascript" src="vendors/revolution/js/extensions/revolution.extension.layeranimation.min.js"></script>
+    <script type="text/javascript" src="vendors/revolution/js/extensions/revolution.extension.navigation.min.js"></script>
+    <script src="js/jquery.form.js"></script>
+    <script src="js/jquery.validate.min.js"></script>
+    <script src="js/contact.js"></script>
+    <!-- owl carousel-->
+    <script src="vendors/owlcarousel/owl.carousel.min.js"></script>
+    <script src="vendors/jquery-ui-1.11.4/jquery-ui.min.js"></script>
+    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDTI1BZJKFCeJ8g9O01CMZ4QvVCfdPYkrE"></script>
+    <script src="js/gmaps.min.js"></script>
+    <script src="js/theme.js"></script>
+	
+</body>
+
+
+
+
+
+</html>

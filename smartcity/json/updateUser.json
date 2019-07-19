@@ -1,0 +1,8 @@
+{
+    "userId": 1,
+    "login": "testLogin",
+    "password": "testPassWord",
+    "lastName": "Delix",
+    "firstName": "Antoine",
+    "access": "ADMIN"
+}

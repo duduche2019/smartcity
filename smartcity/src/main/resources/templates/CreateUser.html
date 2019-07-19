@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<meta charset="UTF-8" />
+
+<!-- Head -->
+<div th:replace="fragments/Head :: head" />
+
+
+<body>
+	<!-- Header -->
+	<div th:replace="fragments/Header :: header" />
+
+
+	<!-- Inner Header-->
+	<section class="inner-banner2 clearfix">
+		<div class="container clearfix">
+			<h2>Espace inscription</h2>
+		</div>
+	</section>
+	<section class="breadcumb-wrapper">
+		<div class="container clearfix">
+			<ul class="breadcumb">
+				<li><a th:href="@{/accueil}">Accueil</a></li>
+				<li><span>Inscription</span></li>
+			</ul>
+		</div>
+	</section>
+	
+	
+<!-- contenu -->
+	<!-- Contact us Page-->
+	<section class="core-projects touch">
+		<div class="sectpad touch_bg">
+			<div class="container clearfix">
+				<h1>Inscrivez-vous</h1>
+				
+				<div class="row touch_middle">
+					<div class="col-md-8 input_form">
+					
+					<!-- th:action="@{/user/addUser}" -->
+					
+						<form id="contactForm" action="" th:action="@{/user/addUser}"
+							th:object="${user}" method="post">
+
+							<div class="form-group">
+								<input id="lastName" type="text" name="lastName"
+									placeholder="nom" class="form-control"/> <span class="text-danger" 
+									 th:if="${#fields.hasErrors('lastName')}"
+									th:errors="*{lastName}"></span>
+							</div>
+
+							<div class="form-group">
+								<input id="firstName" type="text" name="firstName"
+									placeholder="prénom" class="form-control"/>
+									<span class="text-danger"
+									th:if="${#fields.hasErrors('firstName')}"
+									th:errors="*{firstName}"></span>
+							</div>
+
+							<div class="form-group">
+								<input id="login" type="text" name="login" placeholder="login"
+									class="form-control"/>
+									<span class="text-danger"
+									 th:if="${#fields.hasErrors('login')}"
+									th:errors="*{login}"></span>
+									
+							</div>
+
+							<div class="form-group">
+								<input id="password" type="password" name="password"
+									placeholder="mot de passe" class="form-control"/>
+									<span class="text-danger"
+									th:if="${#fields.hasErrors('password')}"
+									th:errors="*{password}"></span>
+							</div>
+
+							<div class="form-group">
+								<input id="email" type="email" name="email" placeholder="Email"
+									class="form-control"/>
+									<span class="text-danger"
+									th:if="${#fields.hasErrors('email')}"
+									th:errors="*{email}"></span>
+							</div>
+							<div class="row m0">
+								<button type="submit" class="btn btn-default submit">
+									valider l'inscription <i class="fa fa-angle-double-right"></i>
+								</button>
+							</div>
+						</form>
+	
+					</div>
+				</div>
+				
+				
+			</div>
+		</div>
+	</section>
+	
+<!--
+    <section id="map-area">
+      <div id="contact-google-map" data-map-lat="48.5734053" data-map-lng="7.7521113" data-icon-path="images/map/map-marker.png" data-map-title="Envato HQ" data-map-zoom="12" class="google-map"></div>
+    </section>
+-->
+	
+	
+	<!-- footer -->
+	<div th:replace="fragments/Footer :: footer"/>  
+	
+	 <script src="js/jquery-1.12.2.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <!-- Revolution Slider Tools-->
+    <script src="vendors/revolution/js/jquery.themepunch.revolution.min.js"></script>
+    <!-- Revolution Slider-->
+    <script type="text/javascript" src="vendors/revolution/js/extensions/revolution.extension.slideanims.min.js"></script>
+    <script type="text/javascript" src="vendors/revolution/js/extensions/revolution.extension.layeranimation.min.js"></script>
+    <script type="text/javascript" src="vendors/revolution/js/extensions/revolution.extension.navigation.min.js"></script>
+    <script src="js/jquery.form.js"></script>
+    <script src="js/jquery.validate.min.js"></script>
+    <script src="js/contact.js"></script>
+    <!-- owl carousel-->
+    <script src="vendors/owlcarousel/owl.carousel.min.js"></script>
+    <script src="vendors/jquery-ui-1.11.4/jquery-ui.min.js"></script>
+    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDTI1BZJKFCeJ8g9O01CMZ4QvVCfdPYkrE"></script>
+    <script src="js/gmaps.min.js"></script>
+    <script src="js/theme.js"></script>
+	
+	
+</body>
+
+</html>
+

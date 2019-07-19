@@ -1,0 +1,14 @@
+{
+    "plotTypeId": 1,
+    "plotTypeName": "Mangrove",
+    "plotTypeAbrev": "MAN",
+    "category": "NATURE",
+    "influenceLevel": "EUCLIDIEN",
+    "negativeInfluence": 0,
+    "positiveInfluence": 20,
+    "negDistInfluence": 0,
+    "posDistInfluence": 5,
+    "color": "GREEN",
+    "plotTypeDescription": "Au paradis des crabes",
+    "possibleValue": true
+}

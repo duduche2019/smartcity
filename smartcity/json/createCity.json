@@ -1,0 +1,19 @@
+{
+	"cityName": "Bordeaux",
+	"cityAbrev": "BOR",
+	"width": 20,
+	"height": 15,
+	"minimumValue": 5.5,
+	"maximumValue": 10.5,
+	"cityDescription": "ville classée à l'Unesco",
+	"euclidDist": 10,
+	"distPerBox": 10,
+	"user": {
+    	"userId": 1,
+    	"login": "testLogin",
+    	"password": "testPassWord",
+    	"lastName": "Felix",
+    	"firstName": "Antoine",
+    	"access": "ADMIN"
+	}
+}

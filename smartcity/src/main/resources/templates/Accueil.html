@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+<meta charset="UTF-8" />
+<title>City example</title>
+
+
+<link  rel="stylesheet" type="text/css"  href="../static/css/style.css" th:href="@{/css/style.css}" />
+
+<!--lien vers les feuilles de style bootstrap et feuilles de style perso-->
+<link rel="stylesheet"
+	href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css"/>
+<link rel="stylesheet"
+	href="https://fonts.googleapis.com/css?family=Montserrat:400,700"/>
+<link rel="stylesheet"
+	href="https://s3-us-west-2.amazonaws.com/s.cdpn.io/85807/font-awesome.css"/>
+
+
+
+
+
+
+
+<!--lien vers les les fonction javascript jquery-->
+<script
+	src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+<script
+	src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
+<script
+	src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.11.2/jquery-ui.min.js"></script>
+
+</head>
+
+
+
+
+<body>
+
+	<div class="container">
+
+		<h1>City example</h1>
+
+		<div class="row">
+			<p th:text="${city.cityName}"></p>
+			<p th:text="${city.cityAbrev}"></p>
+			<p th:text="${city.cityId}"></p>
+
+		</div>
+	</div>
+
+
+	<div class="container">
+		<div class="row">
+			<div class="col-sm-12">
+				<h2 th:text="${city.cityName}"></h2>
+				<label>Valeur minimale d'un terrain</label><p th:text=" ${city.minimumValue}" style="color:red"></p>
+						<label>Valeur maximale d'un terrain</label><p th:text="${city.maximumValue}"></p>
+				<ul class="clearfix" id="sortable">
+					<li>
+						<div class="box nostatus">
+							<h4>Project Title</h4>
+							<p>Here is a short description of a basic project</p>
+						</div>
+					</li>
+					<li>
+						<div class="box danger">
+							<h4>Bad Project</h4>
+							<p>Here is a short description of a project this is in
+								trouble</p>
+						</div>
+					</li>
+					<li>
+						<div class="box danger">
+							<h4>Bad Project</h4>
+							<p>Here is a short description of a project this is in
+								trouble</p>
+						</div>
+					</li>
+					<li>
+						<div class="box nostatus">
+							<h4>Project Title</h4>
+							<p>Here is a short description of a basic project</p>
+						</div>
+					</li>
+					<li>
+						<div class="box excellent">
+							<h4>Excellent Project</h4>
+							<p>Here is a short description of a project that is doing
+								excellent</p>
+						</div>
+					</li>
+					<li>
+						<div class="box excellent">
+							<h4>Excellent Project</h4>
+							<p>Here is a short description of a project that is doing
+								excellent</p>
+						</div>
+					</li>
+					<li>
+						<div class="box nostatus">
+							<h4>Project Title</h4>
+							<p>Here is a short description of a basic project</p>
+						</div>
+					</li>
+					<li>
+						<div class="box nostatus">
+							<h4>Project Title</h4>
+							<p>Here is a short description of a basic project</p>
+						</div>
+					</li>
+					<li>
+						<div class="box good">
+							<h4>Pretty Good Project</h4>
+							<p>Here is a short description of a project that is doing
+								good</p>
+						</div>
+					</li>
+					<li>
+						<div class="box nostatus">
+							<h4>Project Title</h4>
+							<p>Here is a short description of a basic project</p>
+						</div>
+					</li>
+					<li>
+						<div class="box nostatus">
+							<h4>Project Title</h4>
+							<p>Here is a short description of a basic project</p>
+						</div>
+					</li>
+					<li>
+						<div class="box good">
+							<h4>Pretty Good Project</h4>
+							<p>Here is a short description of a project that is doing
+								good</p>
+						</div>
+					</li>
+					
+					
+				</ul>
+			</div>
+		</div>
+	</div>
+
+
+
+
+
+	<script>
+		$(function() {
+			$("#sortable").sortable();
+			$("#sortable").disableSelection();
+		});
+		$('#sortable li').addClass(
+				'ui-state-default col-md-3 col-sm-4 col-xs-12');
+		$('.nostatus h4').prepend('<i class="fa fa-circle-o"></i>');
+		$('.danger h4').prepend('<i class="fa fa-exclamation-circle"></i>');
+		$('.good h4').prepend('<i class="fa fa-check"></i>');
+		$('.excellent h4').prepend('<i class="fa fa-star"></i>');
+	</script>
+
+
+	<!--lien vers les les fonction javascript jquery-->
+	<script
+		src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+	<script
+		src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
+	<script
+		src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.11.2/jquery-ui.min.js"></script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</body>
+</html>

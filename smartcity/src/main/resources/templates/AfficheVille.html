@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<meta charset="UTF-8" />
+
+<!-- Head -->
+<div th:replace="fragments/Head :: head" />
+
+<body>
+<!-- Header -->
+	<div th:replace="fragments/Header :: header" />
+	
+	<!-- Inner Header-->
+	<section class="inner-banner2 clearfix">
+		<div class="container clearfix">
+			<h2>Informations sur la ville</h2>
+		</div>
+	</section>
+
+<section class="breadcumb-wrapper">
+		<div class="container clearfix">
+			<ul class="breadcumb">
+				<li><a th:href="@{/accueil}">Accueil</a></li>
+				<li><a th:href="@{/accueil}">Mon espace</a></li>
+				<li><a th:href="@{/city/showcities}">Mes villes</a></li>
+				<li><span>informations sur la ville</span></li>
+			</ul>
+		</div>
+	</section>
+	
+<!-- 
+<div class="container">
+    <h1>information sur la ville</h1>	
+	<div class="row">	    
+	    
+	    <p th:text= "${city.cityName}"></p>	    
+	    	
+	</div>
+</div>
+ -->
+
+
+ <section class="container ind-common-pad2 clearfix">
+      <div class="quality-wrapper text-center">
+        <div class="vision tab-panel fade in">
+          <h2 th:text= "${city.cityName}"></h2>
+          <p th:text= "'Description : '+${city.cityDescription}">
+          </p>
+        </div>
+        
+        <div class="vision-wrapper text-center">
+          <ul>
+            <li><a >
+                <p  th:text= "'valeur min du terrain : '+${city.minimumValue}+'€/m²'"></p></a>
+            </li>
+             <li><a >
+                <p th:text= "'valeur max du terrain : '+${city.maximumValue}+'€/m²'"></p></a>
+            </li>
+                           
+          </ul>
+        </div>
+      </div>
+    </section>
+
+
+
+
+
+
+
+<!-- footer -->
+	<div th:replace="fragments/Footer :: footer" />
+	
+	 <script src="js/jquery-1.12.2.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <!-- Revolution Slider Tools-->
+    <script src="vendors/revolution/js/jquery.themepunch.revolution.min.js"></script>
+    <!-- Revolution Slider-->
+    <script type="text/javascript" src="vendors/revolution/js/extensions/revolution.extension.slideanims.min.js"></script>
+    <script type="text/javascript" src="vendors/revolution/js/extensions/revolution.extension.layeranimation.min.js"></script>
+    <script type="text/javascript" src="vendors/revolution/js/extensions/revolution.extension.navigation.min.js"></script>
+    <script src="js/jquery.form.js"></script>
+    <script src="js/jquery.validate.min.js"></script>
+    <script src="js/contact.js"></script>
+    <!-- owl carousel-->
+    <script src="vendors/owlcarousel/owl.carousel.min.js"></script>
+    <script src="vendors/jquery-ui-1.11.4/jquery-ui.min.js"></script>
+    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDTI1BZJKFCeJ8g9O01CMZ4QvVCfdPYkrE"></script>
+    <script src="js/gmaps.min.js"></script>
+    <script src="js/imagelightbox.min.js"></script>
+    <script src="js/theme.js"></script>
+</body>
+</html>

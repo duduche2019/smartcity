@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<meta charset="UTF-8" />
+
+<!-- Head -->
+<div th:replace="fragments/Head :: head" />
+
+<body>
+	<!-- Header -->
+	<div th:replace="fragments/Header :: header" />
+
+	<!-- Inner Header-->
+	<section class="inner-banner2 clearfix">
+		<div class="container clearfix">
+			<h2>Modification et Information - parcelle</h2>
+		</div>
+	</section>
+
+	<section class="breadcumb-wrapper">
+		<div class="container clearfix">
+			<ul class="breadcumb">
+				<li><a th:href="@{/accueil}">Accueil</a></li>
+				<li><a th:href="@{/accueil}">Mon espace</a></li>
+				<li><a th:href="@{/city/showcities}">Mes villes</a></li>
+				<li><span>Edition</span></li>
+				<li><span>informations et modification sur la parcelle</span></li>
+			</ul>
+		</div>
+	</section>
+
+	<!-- 
+<div class="container">
+    <h1>information sur la ville</h1>	
+	<div class="row">	    
+	    
+	    <p th:text= "${city.cityName}"></p>	    
+	    	
+	</div>
+</div>
+ -->
+	<!-- 
+
+	<section class="container ind-common-pad2 clearfix">
+		<div class="quality-wrapper text-center">
+			
+				<div class="req-button text-center">
+					<a th:href="@{/contact/pagecontact}" class="submit">Modifier</a>
+				</div>
+				<div class="req-button text-center ">
+					<a th:href="@{|/city/showcity/${plot.city.cityId}|}" class="submit">Retour</a>
+				</div>
+		</div>		
+	</section>
+	 -->
+
+
+
+	<!-- our clients & Get in touch-->
+	<div class="container clearfix ind-common-pad">
+		<div class="row">
+			<div class="col-lg-6 col-md-6 col-sm-12 col-xs-12 our-t-client">
+				<div class="section_header2 common">
+					<h2>Informations sur la parcelle</h2>
+				</div>
+				<p>
+				<h3 th:text="'Nom de la parcelle : '+${plot.plotName}"></h3>
+				<h4 th:text="'Type de la parcelle : '+${plot.plotType.plotTypeName}"></h4>
+				<h4 th:text="'Abscisse : '+${plot.positionX}"></h4>
+				<h4 th:text="'Ordonnée : '+${plot.positionY}"></h4>
+				<h4 th:text="'Valeur initiale de la parcelle : '+${plot.initialValue}+' euros €/m²'"></h4>
+				<h4 th:text="'Valeur immobilière finale de la parcelle : '+${plot.finalValue}+' euros €/m²'"></h4>
+				</p>
+			</div>
+
+			<div class="col-lg-6 col-md-6 col-sm-12 col-xs-12">
+				<div class="section_header2 common">
+					<h2>Modifier la parcelle</h2>
+				</div>
+				<div class="get-t-touch">
+					<div class="get-t-touch-inner input_form service-request-form">
+						<form id="serviceForm" th:action="@{|/plot/changeplottype/${plot.city.cityId}/${plot.plotId}|}"  th:object="${plotType}" class="service_request" method="post">
+
+							<div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+								<div class="select-box">
+									<select  name="plotType"  id="plotType" class="form-control">
+										<option
+											th:each="plotType : ${plotTypeList}"
+											th:value="${plotType.plotTypeId}" th:text="${plotType.plotTypeName}"
+											class="form-control"></option>
+									</select>
+								</div>
+							</div>
+							<div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 submit-n-now">
+								<button type="submit" class="submit">
+									Valider <i class="fa fa-arrow-right"></i>
+								</button>
+							</div>
+						</form>
+
+
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+
+
+
+
+
+
+
+	<!-- footer -->
+	<div th:replace="fragments/Footer :: footer" />
+
+
+
+
+
+
+	<script src="js/jquery-1.12.2.min.js"></script>
+	<script src="js/bootstrap.min.js"></script>
+	<!-- Revolution Slider Tools-->
+	<script src="vendors/revolution/js/jquery.themepunch.revolution.min.js"></script>
+	<!-- Revolution Slider-->
+	<script type="text/javascript"
+		src="vendors/revolution/js/extensions/revolution.extension.slideanims.min.js"></script>
+	<script type="text/javascript"
+		src="vendors/revolution/js/extensions/revolution.extension.layeranimation.min.js"></script>
+	<script type="text/javascript"
+		src="vendors/revolution/js/extensions/revolution.extension.navigation.min.js"></script>
+	<script src="js/jquery.form.js"></script>
+	<script src="js/jquery.validate.min.js"></script>
+	<script src="js/contact.js"></script>
+	<!-- owl carousel-->
+	<script src="vendors/owlcarousel/owl.carousel.min.js"></script>
+	<script src="vendors/jquery-ui-1.11.4/jquery-ui.min.js"></script>
+	<script
+		src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDTI1BZJKFCeJ8g9O01CMZ4QvVCfdPYkrE"></script>
+	<script src="js/gmaps.min.js"></script>
+	<script src="js/imagelightbox.min.js"></script>
+	<script src="js/theme.js"></script>
+
+</body>
+</html>

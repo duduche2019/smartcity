@@ -1,0 +1,13 @@
+{
+	"plotTypeName": "Marais",
+	"plotTypeAbrev": "MAR",
+	"category":"NATURE",
+	"influenceLevel":"EUCLIDIEN",
+	"negativeInfluence": 0,
+	"positiveInfluence": 20,
+	"negDistInfluence": 0,
+	"posDistInfluence": 5,
+	"color":"GREEN",
+	"plotTypeDescription": "Au paradis des moustiques",
+    "possibleValue":true
+}

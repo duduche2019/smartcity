@@ -1,0 +1,16 @@
+{
+
+		"plotName" :"ma parcelle",
+		"positionX" :24,
+		"positionY" :67,
+		
+"city":
+	{
+    "cityId": 1
+    
+	},
+"plotType": {
+        "plotTypeId": 1   
+		}
+
+}

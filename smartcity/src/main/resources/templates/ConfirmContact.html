@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<meta charset="UTF-8" />
+
+<!-- Head -->
+<div th:replace="fragments/Head :: head" />
+
+
+<body>
+
+	<!-- Header -->
+	<div th:replace="fragments/Header :: header" />
+
+	<!-- Inner Header-->
+	<section class="inner-banner2 clearfix">
+		<div class="container clearfix">
+			<h2>Contactez-nous</h2>
+		</div>
+	</section>
+	<section class="breadcumb-wrapper">
+		<div class="container clearfix">
+			<ul class="breadcumb">
+				<li><a th:href="@{/accueil}">Accueil</a></li>
+				<li><span>Contactez-nous</span></li>
+			</ul>
+		</div>
+	</section>
+
+
+	<!-- Contact us Page-->
+	<section class="core-projects touch">
+		<div class="sectpad touch_bg">
+			<div class="container clearfix">
+				<h1>Besoin d'aide ?</h1>
+
+				<div class="row touch_middle">
+					<div class="col-md-4 open_hours">
+						<div class="touch_top-con">
+							<ul class="nav">
+								<li class="item">
+									<div class="media">
+										<div class="media-left">
+											<a href="#"><i class="fa fa-map-marker"></i></a>
+										</div>
+										<div class="media-body">SMARTCITY, 247 Avenue de colmar
+											67000 Strasbourg</div>
+									</div>
+								</li>
+								<li class="item">
+									<div class="media">
+										<div class="media-left">
+											<a href="#"><i class="fa fa-envelope-o"></i></a>
+										</div>
+										<div class="media-body">
+											<a href="mailto:contact@smartcity.com">contact@smartcity.com</a><br />
+											<a href="mailto:support@smartcity.com">support@smartcity.com</a>
+										</div>
+									</div>
+								</li>
+								<li class="item">
+									<div class="media">
+										<div class="media-left">
+											<a href="#"><i class="fa fa-phone"></i></a>
+										</div>
+										<div class="media-body">
+											03 88 99 99 99<br /> 03 88 56 56 56
+										</div>
+									</div>
+								</li>
+							</ul>
+						</div>
+					</div>
+
+
+					<h1>Votre message a bien été envoyé</h1>
+					<h1>Nous vous répondrons le plus vite possible</h1>
+
+				</div>
+			</div>
+		</div>
+	</section>
+
+	<!--
+    <section id="map-area">
+      <div id="contact-google-map" data-map-lat="48.5734053" data-map-lng="7.7521113"   data-map-zoom="12" class="google-map"></div>
+    </section>
+    -->
+
+	<section>
+		<iframe id="contact-google-map" class="google-map" data-map-zoom="12"
+			src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2640.882828715994!2d7.74345111496098!3d48.55463787925884!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4796c9995306cb33%3A0x9c1ab6c428259b!2s247+Avenue+de+Colmar%2C+67100+Strasbourg!5e0!3m2!1sfr!2sfr!4v1562681086983!5m2!1sfr!2sfr"
+			width="100%" height="450" frameborder="0" style="margin: auto;"
+			allowfullscreen=""></iframe>
+	</section>
+
+
+
+	<!-- Indurial Solution-->
+
+
+	<!-- footer -->
+	<div th:replace="fragments/Footer :: footer" />
+	
+	 <script src="js/jquery-1.12.2.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <!-- Revolution Slider Tools-->
+    <script src="vendors/revolution/js/jquery.themepunch.revolution.min.js"></script>
+    <!-- Revolution Slider-->
+    <script type="text/javascript" src="vendors/revolution/js/extensions/revolution.extension.slideanims.min.js"></script>
+    <script type="text/javascript" src="vendors/revolution/js/extensions/revolution.extension.layeranimation.min.js"></script>
+    <script type="text/javascript" src="vendors/revolution/js/extensions/revolution.extension.navigation.min.js"></script>
+    <script src="js/jquery.form.js"></script>
+    <script src="js/jquery.validate.min.js"></script>
+    <script src="js/contact.js"></script>
+    <!-- owl carousel-->
+    <script src="vendors/owlcarousel/owl.carousel.min.js"></script>
+    <script src="vendors/jquery-ui-1.11.4/jquery-ui.min.js"></script>
+    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDTI1BZJKFCeJ8g9O01CMZ4QvVCfdPYkrE"></script>
+    <script src="js/gmaps.min.js"></script>
+    <script src="js/theme.js"></script>
+
+
+</body>
+
+</html>

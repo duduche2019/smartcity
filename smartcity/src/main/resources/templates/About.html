@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<meta charset="UTF-8" />
+
+<!-- Head -->
+<div th:replace="fragments/Head :: head" />
+
+
+<body>
+	<!-- Header -->
+	<div th:replace="fragments/Header :: header" />
+	
+	
+<!-- Inner Header-->
+    <section class="inner-banner2 clearfix">
+      <div class="container clearfix">
+        <h2>A propos</h2>
+      </div>
+    </section>
+    <section class="breadcumb-wrapper">
+      <div class="container clearfix">
+        <ul class="breadcumb">
+          <li><a th:href="@{/accueil}">Accueil</a></li>
+          <li><span>A propos</span></li>
+        </ul>
+      </div>
+    </section>
+    <section class="about-tab-box sectpad">
+      <div class="container clearfix">
+        <div class="row">
+          <div class="col-sm-4 col-lg-3">
+            <div class="tab-title-box">
+              <ul role="tablist" class="clearfix">
+                <li data-tab-name="history"><a href="#history" aria-controls="history" role="tab" data-toggle="tab">Présentation</a></li>
+                <li data-tab-name="mission" class="active"><a href="#mission" aria-controls="mission" role="tab" data-toggle="tab">Historique</a></li>
+                <li data-tab-name="vision"><a href="#vision" aria-controls="vision" role="tab" data-toggle="tab">nos valeurs</a></li>
+              </ul>
+            </div>
+          </div>
+          <div class="col-sm-8 col-lg-9">
+            <div class="tab-content-box tab-content about-tab">
+              <div id="history" class="single-tab-content tab-pane fade">
+                <h2>Présentation</h2>
+                <p>Cet outil devrait permettre à ceux qui le souhaite de connaître l’impact de leur environnement proche de terrains sur la valeur d’un futur bien à acquérir pour un particulier par exemple. Pour une institution, une administration, un promoteur ou un pays de mieux organiser l’espace afin de valoriser au mieux l’espace urbain par rapport à une organisation de vie, optimiser la valeur d’une parcelle ou de mieux aménager l’espace urbain en fonction d’objectifs bien définis.</p>
+                <p>sed quia non numquam eius modi tempora incidunt ut labore et dolore magnam aliquam quaerat voluptatem. Ut enim ad minima veniam, quis nostrum exercitationem ullam corporis suscipit laboriosam, nisi ut aliquid ex ea commodi consequatur?</p>
+                <div class="row">
+                  <div class="col-sm-12 abot-img"><img src="images/about/about1.jpg" alt="" class="img-responsive"/><img src="images/about/about2.jpg" alt="" class="img-responsive"/></div>
+                </div>
+              </div>
+              <div id="mission" class="single-tab-content tab-pane fade in active">
+                <h2>Historique</h2>
+                <p>Ce projet a vu le jour suite à une demande de projet applicatif en java et ce, afin de monter ou d’acquérir un savoir faire propre aux technologies web faisant usage du langage java, tel que Spring boot ou Swing, dans le cadre de notre licence Pro Java Objet. Cet exercice a été l’occasion de mettre en pratique les leçons acquises dans la gestion de projet ainsi que celles faisant appel aux besoins du back (java Spring boot) et du front (HTML, CSS, JavaScript).</p>
+                <p>Ce projet s’est d’abord organisé de façon très humaine, l’ensemble des membres de l’équipe étant particulièrement intéressé par les différents aspects du projet. La complémentarité des compétences a permis à chacun de trouver naturellement sa place afin soit de monter en compétences par la formation, soit de mettre en avant une capacité particulière (architecture, algorithmique, design, etc…).</p>
+                <div class="row">
+                  <div class="col-sm-12 abot-img"><img src="images/about/about1.jpg" alt="" class="img-responsive"/><img src="images/about/about2.jpg" alt="" class="img-responsive"/></div>
+                </div>
+              </div>
+              <div id="vision" class="single-tab-content tab-pane fade">
+                <h2>Nos valeurs</h2>
+                <p>Afin de mener à bien ce projet, il était intéressant de mettre au clair certains principes de base du travail en équipe afin de garder une cohésion tout au long du projet. L’ego a été banni de notre projet, l’intérêt de ce dernier étant prioritaire, tout au long de notre travail. Chaque des membres de l’équipe a dû à un moment du projet décider, ou accepter une responsabilité particulière afin de décharger les autres membres de l’équipe pour leur permettre de participer à leur tour à l’édification du projet final.</p>
+                <p>La communication ou toutes les manières possibles afin de faire circuler l’information de manière efficace a été l’un des maillons essentiels à l’élaboration du projet. Le respect des différences de points de vue a permis d’enrichir chaque membre du groupe afin d’être plus efficace dans chacune de nos tâches respectives.
+La curiosité ou les idées nouvelles ne sont pas un frein, mais une manière d’enrichir le travail de chaque membre d’une équipe.</p>
+                <div class="row">
+                  <div class="col-sm-12 abot-img"><img src="images/about/about1.jpg" alt=""/><img src="images/about/about2.jpg" alt=""/></div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    
+    
+    <!-- Our Clients-->
+    <section class="our-client sectpad">
+      <div class="container clearfix">
+        <div class="section_header">
+          <h2>Nos clients</h2>
+        </div>
+        <div class="client-carousel">
+          <div class="client-slider">
+            <div class="item"><img src="images/clients/1.jpg" alt=""/></div>
+            <div class="item"><img src="images/clients/2.jpg" alt=""/></div>
+            <div class="item"><img src="images/clients/3.jpg" alt=""/></div>
+            <div class="item"><img src="images/clients/4.jpg" alt=""/></div>
+            <div class="item"><img src="images/clients/5.jpg" alt=""/></div>
+            <div class="item"><img src="images/clients/6.jpg" alt=""/></div>
+          </div>
+        </div>
+      </div>
+    </section>
+    
+    <!-- footer -->
+	<div th:replace="fragments/Footer :: footer" />
+   	
+	<script src="js/jquery-1.12.2.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <!-- Revolution Slider Tools-->
+    <script src="vendors/revolution/js/jquery.themepunch.revolution.min.js"></script>
+    <!-- Revolution Slider-->
+    <script type="text/javascript" src="vendors/revolution/js/extensions/revolution.extension.slideanims.min.js"></script>
+    <script type="text/javascript" src="vendors/revolution/js/extensions/revolution.extension.layeranimation.min.js"></script>
+    <script type="text/javascript" src="vendors/revolution/js/extensions/revolution.extension.navigation.min.js"></script>
+    <script src="js/jquery.form.js"></script>
+    <script src="js/jquery.validate.min.js"></script>
+    <script src="js/contact.js"></script>
+    <!-- owl carousel-->
+    <script src="vendors/owlcarousel/owl.carousel.min.js"></script>
+    <script src="vendors/jquery-ui-1.11.4/jquery-ui.min.js"></script>
+    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDTI1BZJKFCeJ8g9O01CMZ4QvVCfdPYkrE"></script>
+    <script src="js/gmaps.min.js"></script>
+    <script src="js/theme.js"></script> 
+
+</body>
+</html>

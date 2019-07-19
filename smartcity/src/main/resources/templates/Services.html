@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<meta charset="UTF-8" />
+
+<!-- Head -->
+<div th:replace="fragments/Head :: head" />
+
+
+<body>
+
+<!-- Header -->
+	<div th:replace="fragments/Header :: header" />
+	
+	
+	
+    
+    <!-- Inner Header-->
+    <section class="inner-banner2 clearfix">
+      <div class="container clearfix">
+        <h2>Nos services</h2>
+      </div>
+    </section>
+    <section class="breadcumb-wrapper">
+      <div class="container clearfix">
+        <ul class="breadcumb">
+          <li><a th:href="@{/accueil}">Accueil</a></li>
+          <li><span>Nos services</span></li>
+        </ul>
+      </div>
+    </section>
+    
+    
+    
+    
+    
+    <!-- Our Services-->
+    <section class="our-services sectpad-ser">
+      <div class="container clearfix">
+        <div class="section_header color">
+          <h2>Nos Services</h2>
+        </div>
+        <div class="row">
+          <div class="col-sm-4 service-info">
+            <div class="item">
+              <div class="post-image"><img src="images/services/ser-img1.jpg" alt=""/><a href="#" class="four_arrow_hover_box"><span class="arrows"><span></span></span></a></div><a href="#">
+                <h4>Création de ville</h4></a>
+              <p>Ce service permet de créer une ville en fonction de paramètres préétablis, tel que sa longueur ou sa hauteur, et ainsi de définir pour chacune des parcelles créée un type particulier appartenant à des catégories telles que : nature, administration, commerce, culte ou divertissement, etc.</p>
+              <h6><a href="#">Lire plus</a></h6>
+            </div>
+          </div>
+          <div class="col-sm-4 service-info">
+            <div class="item">
+              <div class="post-image"><img src="images/services/ser-img2.jpg" alt=""/><a href="#" class="four_arrow_hover_box"><span class="arrows"><span></span></span></a></div><a href="#">
+                <h4>Modification de ville </h4></a>
+              <p>Une ville une fois créée, elle pourra facilement être modifiée par son créateur afin d’apporter à son utilisateur un moyen simple et efficace d’améliorer son projet d’origine. Les modifications porteront essentiellement sur les types de parcelles.</p>
+              <h6><a href="#">Lire plus</a></h6>
+            </div>
+          </div>
+          <div class="col-sm-4 service-info">
+            <div class="item">
+              <div class="post-image"><img src="images/services/ser-img3.png" alt=""/><a href="#" class="four_arrow_hover_box"><span class="arrows"><span></span></span></a></div><a href="#">
+                <h4>Affichage de ville</h4></a>
+              <p>L’affichage d’une ville permet pour un utilisateur donné d’afficher chacun de ses projets de ville. Elle permet de visualiser de façon colorée chaque type de parcelles appartenant à une ville et ainsi de mieux appréhender les différents éléments d’une ville.</p>
+              <h6><a href="#">Lire plus</a></h6>
+            </div>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-sm-4 service-info">
+            <div class="item">
+              <div class="post-image"><img src="images/services/ser-img4.jpg" alt=""/><a href="#" class="four_arrow_hover_box"><span class="arrows"><span></span></span></a></div><a href="#">
+                <h4>Calcul de valeur immobilière</h4></a>
+              <p>Toute parcelle de ville a une valeur de départ fixée pour chacune des villes. Cette dernière sera influencée par l’ensemble des parcelles alentour à condition qu’elles aient une influence. Cette dernière pourra être de deux types : l’une liée à une parcelle valorisante, l’autre liée à son accessibilité par voie de communication.</p>
+              <h6><a href="#">Lire plus</a></h6>
+            </div>
+          </div>
+          <div class="col-sm-4 service-info">
+            <div class="item">
+              <div class="post-image"><img src="images/services/ser-img5.jpg" alt=""/><a href="#" class="four_arrow_hover_box"><span class="arrows"><span></span></span></a></div><a href="#">
+                <h4>La gestion d'utilisateurs</h4></a>
+              <p>Une fois un utilisateur enregistré auprès du site, les droits suivants lui seront légués, ces droits ne seront utilisables que pour cet utilisateur. Ils consisteront à créer des villes, les modifier et les afficher à sa guise.</p>
+              <h6><a href="#">Lire plus</a></h6>
+            </div>
+          </div>
+         
+        </div>
+      </div>
+    </section>
+    <!-- Our Clients-->
+    <section class="our-client sectpad">
+      <div class="container clearfix">
+        <div class="section_header">
+          <h2>Nos Clients</h2>
+        </div>
+        <div class="client-carousel">
+          <div class="client-slider">
+            <div class="item"><img src="images/clients/1.jpg" alt=""/></div>
+            <div class="item"><img src="images/clients/2.jpg" alt=""/></div>
+            <div class="item"><img src="images/clients/3.jpg" alt=""/></div>
+            <div class="item"><img src="images/clients/4.jpg" alt=""/></div>
+            <div class="item"><img src="images/clients/5.jpg" alt=""/></div>
+            <div class="item"><img src="images/clients/6.jpg" alt=""/></div>
+          </div>
+        </div>
+      </div>
+    </section>	
+	
+	
+	
+	
+	
+
+
+<!--footer-->
+	<div th:replace="fragments/Footer :: footer" />
+
+
+
+<!--lien javascript-->
+
+<script src="js/jquery-1.12.2.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <!-- Revolution Slider Tools-->
+    <script src="vendors/revolution/js/jquery.themepunch.revolution.min.js"></script>
+    <!-- Revolution Slider-->
+    <script type="text/javascript" src="vendors/revolution/js/extensions/revolution.extension.slideanims.min.js"></script>
+    <script type="text/javascript" src="vendors/revolution/js/extensions/revolution.extension.layeranimation.min.js"></script>
+    <script type="text/javascript" src="vendors/revolution/js/extensions/revolution.extension.navigation.min.js"></script>
+    <script src="js/jquery.form.js"></script>
+    <script src="js/jquery.validate.min.js"></script>
+    <script src="js/contact.js"></script>
+    <!-- owl carousel-->
+    <script src="vendors/owlcarousel/owl.carousel.min.js"></script>
+    <script src="vendors/jquery-ui-1.11.4/jquery-ui.min.js"></script>
+    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDTI1BZJKFCeJ8g9O01CMZ4QvVCfdPYkrE"></script>
+    <script src="js/gmaps.min.js"></script>
+    <script src="js/theme.js"></script>
+    </body>
+</html>

@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<meta charset="UTF-8" />
+<style>
+.grid {
+	margin: 0 auto;
+	width: 90vw;
+	max-width: 200vh;
+	height: 100vw;
+	max-height: 90vh;
+	font-size: 1rem;
+}
+
+.row {
+	display: flex;
+}
+
+.box {
+	margin: 1px;
+	color: black;
+	font-weight: bold;
+	flex: 1 0 auto;
+	position: relative;
+}
+
+.box:after {
+	content: "";
+	float: left;
+	display: block;
+	padding-top: 100%;
+}
+
+.box .inner {
+	position: absolute;
+	left: 0;
+	right: 0;
+	bottom: 0;
+	top: 0;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+.box .inner:hover {
+ 	background: rgba(76, 175, 80, 0.3)
+}
+</style>
+<!-- Head -->
+<div th:replace="fragments/Head :: head" />
+
+<body>
+	<!-- Header -->
+	<div th:replace="fragments/Header :: header" />
+
+
+	<!-- Inner Header-->
+	<section class="inner-banner2 clearfix"
+		style="padding-top: 20px; padding-bottom: 25px;">
+		<div class="container clearfix" style="margin-top: 5px;">
+			<h2 th:text="${city.cityName} +' ('+${city.cityAbrev}+')'">Paris
+				(PAR)</h2>
+
+			<h3 th:text="'Valeur minimale : '+${city.minimumValue}+' euros €/m²'"
+				class="text-right mt-0"
+				style="font-family: Alegreya, serif; margin-top: 5px; color: white;"></h3>
+			<h3 th:text="'Valeur minimale : '+${city.maximumValue}+' euros €/m²'"
+				class="text-right mt-0"
+				style="font-family: Alegreya, serif; color: white;"></h3>
+			<div class="req-button text-right">
+				<a th:href="@{|/city/detailscity/${city.cityId}|}" class="submit">Details</a> 
+				<a th:href="@{|/city/showcity/${city.cityId}|}" class="submit">Mode normale</a> 
+				<a th:href="@{|/city/deletecity/${city.cityId}|}" class="submit">Supprimer</a>
+			</div>
+		</div>
+	</section>
+	<section class="breadcumb-wrapper">
+		<div class="container clearfix">
+			<ul class="breadcumb">
+				<li><a th:href="@{/accueil}">Accueil</a></li>
+				<li><a th:href="@{/accueil}">Mon espace</a></li>
+				<li><a th:href="@{/city/showcities}">Mes villes</a></li>
+				<li><span>Edition</span></li>
+			</ul>
+		</div>
+	</section>
+
+
+	<!-- Contact us Page-->
+	<section class="core-projects touch">
+
+		<div class="sectpad touch_bg">
+			<div class="grid">
+			 
+				<div th:each="i: ${#numbers.sequence(0, city.height-1)}" class="row" >
+	                <!-- <h3 th:text="${i+1}" ></h3> -->
+					<div th:each="j: ${#numbers.sequence(i*city.width, i * city.width + city.width-1)}" th:with="plot=${city.plotRepresentation[j]}" th:styleappend="'background-color: ' + ${plot.color}+ ';'" class="box">
+						<div class="inner">
+							 <a th:href="@{|/plot/showplot/${plot.plotId}|}"><h3 th:text="${plot.plotType.plotTypeAbrev}"></h3></a>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</section>
+
+	<!-- footer -->
+	<!--<div th:replace="fragments/Footer :: footer" />-->
+
+
+	<script src="js/jquery-1.12.2.min.js"></script>
+	<script src="js/bootstrap.min.js"></script>
+	<!-- Revolution Slider Tools-->
+	<script src="vendors/revolution/js/jquery.themepunch.revolution.min.js"></script>
+	<!-- Revolution Slider-->
+	<script type="text/javascript"
+		src="vendors/revolution/js/extensions/revolution.extension.slideanims.min.js"></script>
+	<script type="text/javascript"
+		src="vendors/revolution/js/extensions/revolution.extension.layeranimation.min.js"></script>
+	<script type="text/javascript"
+		src="vendors/revolution/js/extensions/revolution.extension.navigation.min.js"></script>
+	<script src="js/jquery.form.js"></script>
+	<script src="js/jquery.validate.min.js"></script>
+	<script src="js/contact.js"></script>
+	<!-- owl carousel-->
+	<script src="vendors/owlcarousel/owl.carousel.min.js"></script>
+	<script src="vendors/jquery-ui-1.11.4/jquery-ui.min.js"></script>
+	<script
+		src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDTI1BZJKFCeJ8g9O01CMZ4QvVCfdPYkrE"></script>
+	<script src="js/gmaps.min.js"></script>
+	<script src="js/theme.js"></script>
+
+</body>
+</html>
